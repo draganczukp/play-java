@@ -1,0 +1,4 @@
+[debug] Copy resource mappings: 
+[debug] 	(C:\Users\killermenpl\Dropbox\play-java\conf\application.conf,C:\Users\killermenpl\Dropbox\play-java\target\scala-2.11\classes\application.conf)
+[debug] 	(C:\Users\killermenpl\Dropbox\play-java\conf\logback.xml,C:\Users\killermenpl\Dropbox\play-java\target\scala-2.11\classes\logback.xml)
+[debug] 	(C:\Users\killermenpl\Dropbox\play-java\conf\routes,C:\Users\killermenpl\Dropbox\play-java\target\scala-2.11\classes\routes)

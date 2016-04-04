@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>
+    <!--
+    <meta charset="UTF-8">
+    <title>Untitled Document</title>
+-->
+</head>
+
+<body>
+    <section th:fragment="navbar">
+
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">Killermenpl Web Site</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <!--                   TODO: isActive ? class="active" : "";-->
+                        <li><a href="/" th:class="${page=='//' ? 'active' : ''}">Home</a></li>
+                        <li th:if="${isLoggedIn}"><a href="/users" th:class="${page=='//users' ? 'active' : ''}">User</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li th:if="${isLoggedIn}">
+                            <a href="/users/">
+                                <span class="glyphicon glyphicon-user"></span>
+                                <span th:text="${user.login}">username</span>
+                            </a>
+                        </li>
+
+                        <!--                        <span th:text="${isLoggedIn}">njhk</span>-->
+
+                        <li th:if="${not $isLoggedIn}">
+                            <a href="#login-modal" data-toggle="modal" data-target="#login-modal">
+                                <span class="glyphicon glyphicon-log-in"></span> Login
+                            </a>
+                        </li>
+                        <li th:if="${not $isLoggedIn}">
+                            <a href="/users/register">Register</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+</body>
+
+</html>

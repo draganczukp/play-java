@@ -1,0 +1,26 @@
+nav.navbar {
+  background-color: forestgreen;
+  color: whitesmoke;
+  margin-bottom: 0;
+  border-radius: 0; }
+  nav.navbar .container-fluid .navbar-header a {
+    color: whitesmoke; }
+    nav.navbar .container-fluid .navbar-header a:hover {
+      background-color: darkgreen;
+      color: whitesmoke; }
+  nav.navbar .container-fluid .navbar-collapse ul li a {
+    color: white; }
+    nav.navbar .container-fluid .navbar-collapse ul li a:hover, nav.navbar .container-fluid .navbar-collapse ul li a:focus {
+      background-color: darkgreen;
+      color: whitesmoke; }
+
+.big-image {
+  position: relative;
+  margin-bottom: 25px; }
+  .big-image img {
+    display: block;
+    width: 100%;
+    max-width: 1920;
+    margin: 0; }
+
+/*# sourceMappingURL=main.css.map */

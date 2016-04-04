@@ -1,0 +1,43 @@
+nav.navbar {
+    background-color: forestgreen;
+    color: whitesmoke;
+    margin-bottom: 0;
+    border-radius: 0;
+    .container-fluid {
+        .navbar-header {
+            a {
+                color: whitesmoke;
+                &:hover, {
+                    background-color: darkgreen;
+                    color: whitesmoke;
+                }
+                
+            }
+        }
+        .navbar-collapse {
+            ul {
+                li {
+                    a {
+                        color: white;
+                        &:hover, &:focus {
+                            background-color: darkgreen;
+                            color: whitesmoke;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.big-image{
+    position: relative;
+    
+    img{
+        display: block;
+        width: 100%;
+        max-width: 1920;
+        margin: 0;
+    }
+    
+    margin-bottom: 25px;
+}
