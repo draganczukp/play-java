@@ -1,61 +1,7 @@
-New log file opened at Mon Apr 04 15:58:02 CEST 2016 by 912@killermenplpc
-Taking next connection to: 50908
-New client attempting to connect on port: 50909-50908
-  Address = /192.168.56.1:50908
-This client on port 50909 has uuid a2a7bd4a-8af2-4b7d-9549-1ba9160cbf8a configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
-Connected Clients: activator-a2a7bd4a-8af2-4b7d-9549-1ba9160cbf8a
-Taking next connection to: 50908
-New client attempting to connect on port: 50910-50908
-  Address = /192.168.56.1:50908
-Handshake exception on socket: 50910
-sbt.impl.ipc.HandshakeException: Unable to perform handshake
-	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
-	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
-	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
-Caused by: java.net.SocketException: Software caused connection abort: recv failed
-	at java.net.SocketInputStream.socketRead0(Native Method)
-	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
-	at java.net.SocketInputStream.read(SocketInputStream.java:170)
-	at java.net.SocketInputStream.read(SocketInputStream.java:141)
-	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
-	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
-	at java.io.DataInputStream.readInt(DataInputStream.java:387)
-	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
-	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
-	... 2 more
-Taking next connection to: 50908
-New client attempting to connect on port: 50911-50908
-  Address = /192.168.56.1:50908
-This client on port 50911 has uuid 93967755-9e97-49f4-aade-2cd24cf226cc configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
-Connected Clients: activator-a2a7bd4a-8af2-4b7d-9549-1ba9160cbf8a, activator-93967755-9e97-49f4-aade-2cd24cf226cc
-Taking next connection to: 50908
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 50908
-New client attempting to connect on port: 50960-50908
-  Address = /192.168.56.1:50908
-Handshake exception on socket: 50960
-sbt.impl.ipc.HandshakeException: Unable to perform handshake
-	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
-	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
-	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
-Caused by: java.net.SocketException: Software caused connection abort: recv failed
-	at java.net.SocketInputStream.socketRead0(Native Method)
-	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
-	at java.net.SocketInputStream.read(SocketInputStream.java:170)
-	at java.net.SocketInputStream.read(SocketInputStream.java:141)
-	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
-	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
-	at java.io.DataInputStream.readInt(DataInputStream.java:387)
-	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
-	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
-	... 2 more
-Taking next connection to: 50908
-New client attempting to connect on port: 50961-50908
-  Address = /192.168.56.1:50908
-This client on port 50961 has uuid 69e666b5-b09a-4c16-9368-fb485b22476a configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: activator-93967755-9e97-49f4-aade-2cd24cf226cc, play-fork-run-69e666b5-b09a-4c16-9368-fb485b22476a
-Taking next connection to: 50908
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 50908
+New log file opened at Mon Apr 04 16:10:51 CEST 2016 by 8180@killermenplpc
+Taking next connection to: 51089
+New client attempting to connect on port: 51090-51089
+  Address = /192.168.56.1:51089
+This client on port 51090 has uuid 0a3ff293-51f0-460c-898a-139bae76fda0 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-0a3ff293-51f0-460c-898a-139bae76fda0
+Taking next connection to: 51089
