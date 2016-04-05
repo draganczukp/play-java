@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/killermenpl/Dropbox/play-java/conf/routes
-// @DATE:Sun Apr 03 17:40:39 CEST 2016
+// @DATE:Tue Apr 05 18:52:01 CEST 2016
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -50,24 +50,24 @@ package controllers {
     }
 
   
-    // @LINE:27
+    // @LINE:28
     def get(id:Long): Call = {
       import ReverseRouteContext.empty
-      Call("GET", _prefix + { _defaultPrefix } + "users/user/" + implicitly[PathBindable[Long]].unbind("id", id))
+      Call("GET", _prefix + { _defaultPrefix } + "users/user/" + implicitly[PathBindable[Long]].unbind("id", id) + "/")
     }
   
-    // @LINE:26
+    // @LINE:27
     def logout(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "users/logout")
     }
   
-    // @LINE:24
+    // @LINE:25
     def register(): Call = {
     
       () match {
       
-        // @LINE:24
+        // @LINE:25
         case ()  =>
           import ReverseRouteContext.empty
           Call("POST", _prefix + { _defaultPrefix } + "users/register")
@@ -84,8 +84,16 @@ package controllers {
   
     // @LINE:23
     def login(): Call = {
-      import ReverseRouteContext.empty
-      Call("POST", _prefix + { _defaultPrefix } + "users/login")
+    
+      () match {
+      
+        // @LINE:23
+        case ()  =>
+          import ReverseRouteContext.empty
+          Call("GET", _prefix + { _defaultPrefix } + "users/login")
+      
+      }
+    
     }
   
   }

@@ -1,0 +1,20 @@
+# --- Created by Ebean DDL
+# To stop Ebean DDL generation, remove this comment and start using Evolutions
+
+# --- !Ups
+
+create table user (
+  id                            bigint auto_increment not null,
+  login                         varchar(255),
+  password                      varchar(255),
+  email                         varchar(255),
+  role                          integer,
+  constraint ck_user_role check (role in (0,1)),
+  constraint pk_user primary key (id)
+);
+
+
+# --- !Downs
+
+drop table if exists user;
+

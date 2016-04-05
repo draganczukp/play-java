@@ -1,7 +1,5 @@
 package controllers;
 
-import java.util.HashMap;
-
 import pl.killermenpl.util.ThymeTemplateRenderer;
 import play.mvc.Controller;
 import play.mvc.Result;
@@ -19,13 +17,13 @@ public class HomeController extends Controller {
 	
     public Result index() {
     	ThymeTemplateRenderer renderer = ThymeTemplateRenderer.get();
-    	HashMap<String, Object> vars = new HashMap<>();
-    	vars.put("page", "/");
-    	vars.put("title", "Home");
-    	vars.put("isLoggedIn", session().containsKey("username"));
-//    	vars.put("user", User)
     	
-    	renderer.context.getVariables().putAll(vars);
+    	renderer.setVariable("title", "Home");
+    	renderer.setVariable("action", "home");
+    	
+    	renderer.watchSessionVariable("isLoggedIn");
+    	renderer.watchSessionVariable("user");
+    	
     	return ok(renderer.render("index"));
     }
 

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/killermenpl/Dropbox/play-java/conf/routes
-// @DATE:Sun Apr 03 17:40:39 CEST 2016
+// @DATE:Tue Apr 05 18:52:01 CEST 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -63,17 +63,17 @@ package controllers.javascript {
     }
 
   
-    // @LINE:27
+    // @LINE:28
     def get: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Users.get",
       """
         function(id0) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "users/user/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id0)})
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "users/user/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id0) + "/"})
         }
       """
     )
   
-    // @LINE:26
+    // @LINE:27
     def logout: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Users.logout",
       """
@@ -83,7 +83,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:24
+    // @LINE:25
     def register: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Users.register",
       """
@@ -112,7 +112,11 @@ package controllers.javascript {
       "controllers.Users.login",
       """
         function() {
-          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "users/login"})
+        
+          if (true) {
+            return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "users/login"})
+          }
+        
         }
       """
     )

@@ -20,8 +20,9 @@ GET     /webjars/*file   			controllers.WebJarAssets.at(file)
 
 #users
 GET		/users						controllers.Users.root()
+GET		/users/login				controllers.Users.login()
 POST	/users/login				controllers.Users.login()
 POST	/users/register				controllers.Users.register()
 GET		/users/register				controllers.Users.register()
 GET		/users/logout				controllers.Users.logout()
-GET		/users/user/:id				controllers.Users.get(id: Long)
+GET		/users/user/:id/			controllers.Users.get(id: Long)

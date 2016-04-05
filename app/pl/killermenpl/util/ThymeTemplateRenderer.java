@@ -54,9 +54,7 @@ public class ThymeTemplateRenderer {
 	public Html render(String name){
 		Html html=null;
 		
-		String result = engine.process(name, context);
 		
-		html = new Html(result);
 		
 		if(!sessionVars.isEmpty()){
 			Session session = Http.Context.current().session();
@@ -67,16 +65,23 @@ public class ThymeTemplateRenderer {
 			}
 		}
 		
+		String result = engine.process(name, context);
+		html = new Html(result);
+		
+		context.getVariables().clear();
+		
 		return html;
 	}
 	
-	public void setVariable(String name, Object value){
+	public ThymeTemplateRenderer setVariable(String name, Object value){
 		context.getVariables().put(name, value);
+		return this;
 	}
 	
-	public void watchSessionVariable(String name){
+	public ThymeTemplateRenderer watchSessionVariable(String name){
 		if(sessionVars.contains(name))
-			return;
+			return this;
 		sessionVars.add(name);
+		return this;
 	}
 }

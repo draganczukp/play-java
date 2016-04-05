@@ -26,21 +26,28 @@
                 <h1>NAVBAR</h1></div>
         </div>
     </section>
-    <section th:replace="fragments/user :: login" role="login-modal">
+    <section th:replace="fragments/user :: loginmodal" role="login-modal">
         <div class="container">modal</div>
     </section>
 
     <section th:replace="fragments/logo :: logo">logo</section>
 
-    <div class="panel panel-success" th:if="${registerSuccesfull}">
-        <div class="panel-body">
-            Youur registration is complete. You can now log in.
+    <div class="container">
+        <div class="panel panel-success" th:if="${registerSuccesfull}">
+            <div class="panel-body">
+                Your registration is complete. You can now log in.
+            </div>
         </div>
     </div>
-
     <div class="container" th:switch="${action}">
+        <div th:case="'home'">
+            <section th:replace="fragments/home :: home">HOME</section>
+        </div>
         <div th:case="'user'">
             <section th:replace="fragments/user :: userpage">USER PAGE</section>
+        </div>
+        <div th:case="'login'">
+            <section th:replace="fragments/user :: login">LOGIN</section>
         </div>
         <div th:case="register">
             <section th:replace="fragments/user :: register">REGISTER</section>

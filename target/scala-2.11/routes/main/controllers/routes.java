@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/killermenpl/Dropbox/play-java/conf/routes
-// @DATE:Sun Apr 03 17:40:39 CEST 2016
+// @DATE:Tue Apr 05 18:52:01 CEST 2016
 
 package controllers;
 

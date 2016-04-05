@@ -1,4 +1,7 @@
 [debug] Copy resource mappings: 
 [debug] 	(C:\Users\killermenpl\Dropbox\play-java\conf\application.conf,C:\Users\killermenpl\Dropbox\play-java\target\scala-2.11\classes\application.conf)
+[debug] 	(C:\Users\killermenpl\Dropbox\play-java\conf\evolutions,C:\Users\killermenpl\Dropbox\play-java\target\scala-2.11\classes\evolutions)
 [debug] 	(C:\Users\killermenpl\Dropbox\play-java\conf\logback.xml,C:\Users\killermenpl\Dropbox\play-java\target\scala-2.11\classes\logback.xml)
 [debug] 	(C:\Users\killermenpl\Dropbox\play-java\conf\routes,C:\Users\killermenpl\Dropbox\play-java\target\scala-2.11\classes\routes)
+[debug] 	(C:\Users\killermenpl\Dropbox\play-java\conf\evolutions\default,C:\Users\killermenpl\Dropbox\play-java\target\scala-2.11\classes\evolutions\default)
+[debug] 	(C:\Users\killermenpl\Dropbox\play-java\conf\evolutions\default\1.sql,C:\Users\killermenpl\Dropbox\play-java\target\scala-2.11\classes\evolutions\default\1.sql)

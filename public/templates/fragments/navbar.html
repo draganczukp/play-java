@@ -28,22 +28,23 @@
                         <li th:if="${isLoggedIn}"><a href="/users" th:class="${page=='//users' ? 'active' : ''}">User</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li th:if="${isLoggedIn}">
-                            <a href="/users/">
+                        <li th:if="${user}">
+                            <a href="/users/" th:href="'/users/' + ${user.id}">
                                 <span class="glyphicon glyphicon-user"></span>
                                 <span th:text="${user.login}">username</span>
                             </a>
                         </li>
-
-                        <!--                        <span th:text="${isLoggedIn}">njhk</span>-->
-
-                        <li th:if="${not $isLoggedIn}">
+                        
+                        <li th:if="not ${isLoggedIn}">
                             <a href="#login-modal" data-toggle="modal" data-target="#login-modal">
                                 <span class="glyphicon glyphicon-log-in"></span> Login
                             </a>
                         </li>
-                        <li th:if="${not $isLoggedIn}">
+                        <li th:if="not ${isLoggedIn}">
                             <a href="/users/register">Register</a>
+                        </li>
+                        <li th:if="${isLoggedIn}">
+                            <a href="/users/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
                         </li>
                     </ul>
                 </div>

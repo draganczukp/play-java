@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/killermenpl/Dropbox/play-java/conf/routes
-// @DATE:Sun Apr 03 17:40:39 CEST 2016
+// @DATE:Tue Apr 05 18:52:01 CEST 2016
 
 package router
 
@@ -55,11 +55,12 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.at(path:String = "/public", file:String)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """webjars/""" + "$" + """file<.+>""", """controllers.WebJarAssets.at(file:String)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """users""", """controllers.Users.root()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """users/login""", """controllers.Users.login()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """users/login""", """controllers.Users.login()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """users/register""", """controllers.Users.register()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """users/register""", """controllers.Users.register()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """users/logout""", """controllers.Users.logout()"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """users/user/""" + "$" + """id<[^/]+>""", """controllers.Users.get(id:Long)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """users/user/""" + "$" + """id<[^/]+>/""", """controllers.Users.get(id:Long)"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -136,10 +137,27 @@ class Routes(
   )
 
   // @LINE:23
-  private[this] lazy val controllers_Users_login4_route = Route("POST",
+  private[this] lazy val controllers_Users_login4_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("users/login")))
   )
   private[this] lazy val controllers_Users_login4_invoker = createInvoker(
+    Users_3.login(),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Users",
+      "login",
+      Nil,
+      "GET",
+      """""",
+      this.prefix + """users/login"""
+    )
+  )
+
+  // @LINE:24
+  private[this] lazy val controllers_Users_login5_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("users/login")))
+  )
+  private[this] lazy val controllers_Users_login5_invoker = createInvoker(
     Users_3.login(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -152,11 +170,11 @@ class Routes(
     )
   )
 
-  // @LINE:24
-  private[this] lazy val controllers_Users_register5_route = Route("POST",
+  // @LINE:25
+  private[this] lazy val controllers_Users_register6_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("users/register")))
   )
-  private[this] lazy val controllers_Users_register5_invoker = createInvoker(
+  private[this] lazy val controllers_Users_register6_invoker = createInvoker(
     Users_3.register(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -169,11 +187,11 @@ class Routes(
     )
   )
 
-  // @LINE:25
-  private[this] lazy val controllers_Users_register6_route = Route("GET",
+  // @LINE:26
+  private[this] lazy val controllers_Users_register7_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("users/register")))
   )
-  private[this] lazy val controllers_Users_register6_invoker = createInvoker(
+  private[this] lazy val controllers_Users_register7_invoker = createInvoker(
     Users_3.register(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -186,11 +204,11 @@ class Routes(
     )
   )
 
-  // @LINE:26
-  private[this] lazy val controllers_Users_logout7_route = Route("GET",
+  // @LINE:27
+  private[this] lazy val controllers_Users_logout8_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("users/logout")))
   )
-  private[this] lazy val controllers_Users_logout7_invoker = createInvoker(
+  private[this] lazy val controllers_Users_logout8_invoker = createInvoker(
     Users_3.logout(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -203,11 +221,11 @@ class Routes(
     )
   )
 
-  // @LINE:27
-  private[this] lazy val controllers_Users_get8_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("users/user/"), DynamicPart("id", """[^/]+""",true)))
+  // @LINE:28
+  private[this] lazy val controllers_Users_get9_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("users/user/"), DynamicPart("id", """[^/]+""",true), StaticPart("/")))
   )
-  private[this] lazy val controllers_Users_get8_invoker = createInvoker(
+  private[this] lazy val controllers_Users_get9_invoker = createInvoker(
     Users_3.get(fakeValue[Long]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -216,7 +234,7 @@ class Routes(
       Seq(classOf[Long]),
       "GET",
       """""",
-      this.prefix + """users/user/""" + "$" + """id<[^/]+>"""
+      this.prefix + """users/user/""" + "$" + """id<[^/]+>/"""
     )
   )
 
@@ -254,9 +272,9 @@ class Routes(
       }
   
     // @LINE:24
-    case controllers_Users_register5_route(params) =>
+    case controllers_Users_login5_route(params) =>
       call { 
-        controllers_Users_register5_invoker.call(Users_3.register())
+        controllers_Users_login5_invoker.call(Users_3.login())
       }
   
     // @LINE:25
@@ -266,15 +284,21 @@ class Routes(
       }
   
     // @LINE:26
-    case controllers_Users_logout7_route(params) =>
+    case controllers_Users_register7_route(params) =>
       call { 
-        controllers_Users_logout7_invoker.call(Users_3.logout())
+        controllers_Users_register7_invoker.call(Users_3.register())
       }
   
     // @LINE:27
-    case controllers_Users_get8_route(params) =>
+    case controllers_Users_logout8_route(params) =>
+      call { 
+        controllers_Users_logout8_invoker.call(Users_3.logout())
+      }
+  
+    // @LINE:28
+    case controllers_Users_get9_route(params) =>
       call(params.fromPath[Long]("id", None)) { (id) =>
-        controllers_Users_get8_invoker.call(Users_3.get(id))
+        controllers_Users_get9_invoker.call(Users_3.get(id))
       }
   }
 }

@@ -1,4 +1,2 @@
-[error] C:\Users\killermenpl\Dropbox\play-java\app\controllers\Users.java:26: <identifier> expected
-[error] C:\Users\killermenpl\Dropbox\play-java\app\controllers\Users.java:26: not a statement
-[error] User
-[error] C:\Users\killermenpl\Dropbox\play-java\app\controllers\Users.java:27: not a statement
+[error] C:\Users\killermenpl\Dropbox\play-java\app\controllers\Users.java:129:  play.twirl.api.Html cannot be converted to play.mvc.Result
+[error] renderer.render("index")
