@@ -1,6 +1,9 @@
 package controllers;
 
+import com.google.inject.Inject;
+
 import pl.killermenpl.util.ThymeTemplateRenderer;
+import play.Configuration;
 import play.mvc.Controller;
 import play.mvc.Result;
 
@@ -12,17 +15,19 @@ import play.mvc.Result;
 public class HomeController extends Controller {
 
     
-//	@Inject
-//	public SoyFileSet.Builder builder;
+	@Inject
+	public Configuration config;
 	
     public Result index() {
+    	
+    	if(ThymeTemplateRenderer.config==null)
+    		ThymeTemplateRenderer.config = config;
+    	
     	ThymeTemplateRenderer renderer = ThymeTemplateRenderer.get();
     	
     	renderer.setVariable("title", "Home");
     	renderer.setVariable("action", "home");
     	
-    	renderer.watchSessionVariable("isLoggedIn");
-    	renderer.watchSessionVariable("user");
     	
     	return ok(renderer.render("index"));
     }

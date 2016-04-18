@@ -1,5 +1,7 @@
 package controllers;
 
+import static pl.killermenpl.util.StringUitls.isEmpty;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -11,10 +13,8 @@ import models.User;
 import pl.killermenpl.util.ThymeTemplateRenderer;
 import play.data.DynamicForm;
 import play.data.FormFactory;
-import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
-import static pl.killermenpl.util.StringUitls.*;
 
 public class Users extends Controller {
 	@Inject
@@ -26,7 +26,6 @@ public class Users extends Controller {
 	private static boolean errored = false;
 
 	public Result root() {
-		// User.find.all();
 		return redirect("/");
 	}
 
@@ -124,9 +123,10 @@ public class Users extends Controller {
 		session("isLoggedIn", "true");
 		
 		user.password = "No.";
-		session("userAsJson", Json.toJson(user).asText());
+//		session("userAsJson", Json.toJson(user).asText());
+		session("user", String.valueOf(user.id));
 		renderer.setVariable("user", user);
-		System.out.println("Login");
+//		System.out.println("Login");
 		return redirect("/");
 	}
 
@@ -137,7 +137,11 @@ public class Users extends Controller {
 	}
 
 	public Result get(Long id) {
-		System.out.println(id);
-		return TODO;
+//		System.out.println(id);
+		renderer.setVariable("action", "user");
+		renderer.setVariable("title", User.find.byId(id).login);
+		renderer.setVariable("user2", User.find.byId(id));
+		
+		return ok(renderer.render("index"));
 	}
 }

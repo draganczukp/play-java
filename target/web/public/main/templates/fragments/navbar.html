@@ -25,25 +25,33 @@
                     <ul class="nav navbar-nav">
                         <!--                   TODO: isActive ? class="active" : "";-->
                         <li><a href="/" th:class="${page=='//' ? 'active' : ''}">Home</a></li>
-                        <li th:if="${isLoggedIn}"><a href="/users" th:class="${page=='//users' ? 'active' : ''}">User</a></li>
+                        <li th:if="${user}" th:class="${page=='//articles/*' ? 'active dropdown' : 'dropdown'}">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Article <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/articles/list">List all</a></li>
+                                <li th:if="${user.role.toString()=='ADMIN' || user.role.toString()=='EDITOR'}"><a href="/articles/add">New</a></li>
+<!--                                <li><a href=""></a></li>-->
+                            </ul>
+                        </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li th:if="${user}">
-                            <a href="/users/" th:href="'/users/' + ${user.id}">
+                            <a href="/users/" th:href="'/users/' + ${user.id}+'/user'">
                                 <span class="glyphicon glyphicon-user"></span>
                                 <span th:text="${user.login}">username</span>
                             </a>
                         </li>
                         
-                        <li th:if="not ${isLoggedIn}">
+                        <li th:if="not ${user}">
                             <a href="#login-modal" data-toggle="modal" data-target="#login-modal">
                                 <span class="glyphicon glyphicon-log-in"></span> Login
                             </a>
                         </li>
-                        <li th:if="not ${isLoggedIn}">
+                        <li th:if="not ${user}">
                             <a href="/users/register">Register</a>
                         </li>
-                        <li th:if="${isLoggedIn}">
+                        <li th:if="${user}">
                             <a href="/users/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
                         </li>
                     </ul>

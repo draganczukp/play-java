@@ -11,12 +11,17 @@ GET     /                           controllers.HomeController.index
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file: String)
-GET     /webjars/*file   			controllers.WebJarAssets.at(file)
 
 #tutorial tasks
 #GET		/tasks						controllers.Tasks.tasks()
 #POST 	/tasks/new					controllers.Tasks.newTask()
 #POST	/tasks/:id/delete			controllers.Tasks.deleteTask(id: Long)
+
+#files
+GET		/files/get/:path			controllers.Files.get(path: String)
+POST	/files/upload				controllers.Files.upload()
+GET		/files/upload				controllers.Files.upload()
+
 
 #users
 GET		/users						controllers.Users.root()
@@ -25,4 +30,14 @@ POST	/users/login				controllers.Users.login()
 POST	/users/register				controllers.Users.register()
 GET		/users/register				controllers.Users.register()
 GET		/users/logout				controllers.Users.logout()
-GET		/users/user/:id/			controllers.Users.get(id: Long)
+GET		/users/:id/user				controllers.Users.get(id: Long)
+POST	/users/:id/user				controllers.Users.get(id: Long)
+
+#articles
+GET		/articles					controllers.Articles.list()
+GET		/articles/list				controllers.Articles.list()
+GET		/articles/add				controllers.Articles.add()
+POST	/articles/add				controllers.Articles.add()
+GET		/articles/:id/get			controllers.Articles.get(id: Long)
+GET		/articles/:id/edit			controllers.Articles.edit(id: Long)
+POST	/articles/:id/edit			controllers.Articles.edit(id: Long)

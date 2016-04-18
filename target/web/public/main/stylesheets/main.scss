@@ -41,10 +41,30 @@ nav.navbar {
     }
 }
 
+.dropdown-menu {
+    background-color: green;
+    li:hover {
+        background-color: darkgreen;
+    }
+}
+
 .big-image {
     position: relative;
     width: 100%;
     height: 500px;
     background-image: url("/assets/images/bigimage.jpeg");
     margin-bottom: 20px;
+}
+
+.panel-user-info {}
+
+article{
+    h1{
+        font-size: 30pt;
+    }
+    font-size: 18pt;
+//    &::first-letter{
+//        font-size: 24pt;
+//        padding-left: 10px;
+//        }
 }

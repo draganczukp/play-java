@@ -19,11 +19,21 @@ nav.navbar {
       background-color: darkgreen;
       color: whitesmoke; }
 
+.dropdown-menu {
+  background-color: green; }
+  .dropdown-menu li:hover {
+    background-color: darkgreen; }
+
 .big-image {
   position: relative;
   width: 100%;
   height: 500px;
   background-image: url("/assets/images/bigimage.jpeg");
   margin-bottom: 20px; }
+
+article {
+  font-size: 18pt; }
+  article h1 {
+    font-size: 30pt; }
 
 /*# sourceMappingURL=main.css.map */

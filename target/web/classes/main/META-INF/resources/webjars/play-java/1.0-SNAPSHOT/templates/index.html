@@ -52,6 +52,18 @@
         <div th:case="register">
             <section th:replace="fragments/user :: register">REGISTER</section>
         </div>
+        <div th:case="articleList">
+            <section th:replace="fragments/article :: list">ARTICLE_LIST</section>
+        </div>
+        <div th:case="addArticle">
+            <section th:replace="fragments/article :: new">NEW ARTICLE</section>
+        </div>
+        <div th:case="showArticle">
+            <section th:replace="fragments/article :: get">SHOW ARTICLE</section>
+        </div>
+        <div th:case="editArticle">
+            <section th:replace="fragments/article :: edit">EDIT ARTICLE</section>
+        </div>
     </div>
 
 

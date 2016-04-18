@@ -19,7 +19,6 @@
                         <h4 class="modal-title" id="loginModalLabel">Login</h4>
                     </div>
                     <div class="modal-body" th:include="fragments/user :: login">
-
                     </div>
 
                 </div>
@@ -58,14 +57,34 @@
     </section>
 
     <section th:fragment="userpage">
-        <!--        TODO: table based user info screen-->
+        <!--Gets viewedUser from URL-->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="panel panel-default panel-user-info">
+                       <div class="panel-heading">
+                           <h3 class="panel-header">User information</h3>
+                       </div>
+                        <div class="panel-body">
+                            <table>
+                                <tr>
+                                    <td><h4>Username</h4></td>
+                                    <td th:text="${user.login}">username</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section th:fragment="register">
         <div th:if="${not registerSuccesfull}">
             <section th:each="error : ${errors}">
                 <div class="panel panel-danger">
-                    <div class="panel-body" th:text="${error}">
+                    <div class="panel-body bg-danger" th:text="${error}">
                         Registration error
                     </div>
                 </div>

@@ -1,5 +1,7 @@
 name := """play-java"""
 
+topLevelDirectory := Some("play-openshift")
+
 version := "1.0-SNAPSHOT"
 
 lazy val root = (project in file(".")).enablePlugins(PlayJava, PlayEbean)
@@ -15,7 +17,7 @@ libraryDependencies ++= Seq(
   javaWs,
   evolutions,
   "mysql" % "mysql-connector-java" % "5.1.18",
-  "org.webjars" %% "webjars-play" % "2.5.0",
+  //"org.webjars" %% "webjars-play" % "2.5.0",
   "org.mindrot" % "jbcrypt" % "0.3m"
   //,
   //"com.adrianhurt" %% "play-bootstrap" % "1.0-P25-B3-SNAPSHOT",
@@ -23,6 +25,7 @@ libraryDependencies ++= Seq(
   
 )
 libraryDependencies += "org.thymeleaf" % "thymeleaf" % "2.1.4.RELEASE"
+libraryDependencies += "org.mariadb.jdbc" % "mariadb-java-client" % "1.4.2"
 
 
 // Compile the project before generating Eclipse files, so that generated .scala or .class files for views and routes are present

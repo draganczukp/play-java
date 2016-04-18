@@ -1,7 +1,7 @@
 @ECHO off
 
 REM Uncomment (remove 'REM') and change this variables value to your Openshift app name without any quotation marks..
-REM SET appname=yourAppName
+rem SET appname=play-java
 
 echo This sript assumes that it is run from the root of your Play application, you have installed 7zip and you have already run 'rhc setup'.
 echo if that is not the case, the program will most likely crash.
@@ -24,10 +24,6 @@ echo If you don't want to type it in everytime, just open this script in any tex
 goto pack
 
 :pack
-echo clearing old archives
-cd target/universal/
-del /Q /S *
-cd ../..
 
 echo Packaging your app to .zip archive...
 REM This uses activator's built-in commands that packages to .zip file.
@@ -35,19 +31,19 @@ call activator "dist"
 cd target/universal/
 REM This is needed because 7zip doesn't have any way to convert from .zip to .tgz.
 echo Unzipping the .zip file to temporary directory...
-7z x play-openshift.zip
+7z x play-java-1.0-SNAPSHOT.zip
 
 REM Again, needed. This time it is a fault in .tgz standard, rather than 7zip.
 REM Basically .tgz can contain only one file, in this case it is play-openshift.tar
 echo Packaging to .tar...
-7z a play-openshift.tar play-openshift/*
+7z a play-java-1.0-SNAPSHOT.tar repo/*
 
 REM Finally, it can all be packaged to .tgz archive.
 echo Packaging to .tgz..
-7z a play-openshift.tgz play-openshift.tar
+7z a play-java-1.0-SNAPSHOT.tgz play-java-1.0-SNAPSHOT.tar
 
 echo Deploying to Openshift...
-rhc deploy -a %appname% play-openshift.tgz
+rhc deploy -a %appname% play-java-1.0-SNAPSHOT.tgz
 cd ..
 cd ..
 goto :EOF
