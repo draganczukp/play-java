@@ -1,0 +1,8 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(C:\Users\killermenpl\Dropbox\play-java\conf\application.conf,C:\Users\killermenpl\Dropbox\play-java\target\scala-2.11\classes\application.conf)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\killermenpl\Dropbox\play-java\conf\evolutions,C:\Users\killermenpl\Dropbox\play-java\target\scala-2.11\classes\evolutions)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\killermenpl\Dropbox\play-java\conf\logback.xml,C:\Users\killermenpl\Dropbox\play-java\target\scala-2.11\classes\logback.xml)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\killermenpl\Dropbox\play-java\conf\openshift.conf,C:\Users\killermenpl\Dropbox\play-java\target\scala-2.11\classes\openshift.conf)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\killermenpl\Dropbox\play-java\conf\routes,C:\Users\killermenpl\Dropbox\play-java\target\scala-2.11\classes\routes)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\killermenpl\Dropbox\play-java\conf\evolutions\default,C:\Users\killermenpl\Dropbox\play-java\target\scala-2.11\classes\evolutions\default)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\killermenpl\Dropbox\play-java\conf\evolutions\default\1.sql,C:\Users\killermenpl\Dropbox\play-java\target\scala-2.11\classes\evolutions\default\1.sql)[0m
