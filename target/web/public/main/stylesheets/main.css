@@ -35,5 +35,8 @@ article {
   font-size: 18pt; }
   article h1 {
     font-size: 30pt; }
+  article::first-letter {
+    font-size: 24pt;
+    padding-left: 10px; }
 
 /*# sourceMappingURL=main.css.map */

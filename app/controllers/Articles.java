@@ -77,10 +77,10 @@ public class Articles extends Controller {
 			article.content = form.get("content");
 			// System.out.println(article.toString());
 
-//			if (StringUitls.isEmpty(article.title)) {
-//				error("Article title cannot be empty!");
-//				return articleErrorResult();
-//			}
+			// if (StringUitls.isEmpty(article.title)) {
+			// error("Article title cannot be empty!");
+			// return articleErrorResult();
+			// }
 			if (form.get("action").equalsIgnoreCase("save")) {
 				article.update();
 			} else if (form.get("action").equalsIgnoreCase("save_and_view")) {
@@ -99,30 +99,40 @@ public class Articles extends Controller {
 	public Result edit(Long id) {
 		Article article = Article.find.byId(id);
 		renderer.setVariable("title", "Edit article").setVariable("action", "editArticle");
-
+		
 		if (article == null) {
 			return badRequest("No such article");
 		}
 		if (request().method().equalsIgnoreCase("post")) {
 			DynamicForm form = factory.form().bindFromRequest();
+			 if (form.get("action").equalsIgnoreCase("abort")) {
+					System.out.println(article.content);
+					return redirect("/articles");
+				}
+			
+			article.delete();
+			
+			article = new Article();
+			article.id = id;
 			article.title = form.get("title");
 			article.content = form.get("content");
 			// System.out.println(article.toString());
-			System.out.println(article.content);
 
 			if (StringUitls.isEmpty(article.title)) {
 				error("Article title cannot be empty!");
 				return articleErrorResult();
 			}
-
+			System.out.println(form.get("action"));
 			if (form.get("action").equalsIgnoreCase("save")) {
+				System.out.println(article.content);
 				article.save();
 			} else if (form.get("action").equalsIgnoreCase("save_and_view")) {
+				System.out.println(article.content);
 				article.save();
 				return redirect("/articles/" + article.id + "/get");
-			} else if (form.get("action").equalsIgnoreCase("abort")) {
-				return redirect("/articles");
-			}
+			} else
+			System.out.println(article.content);
+
 		}
 		renderer.setVariable("article", article);
 

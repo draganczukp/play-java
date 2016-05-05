@@ -97,6 +97,9 @@
             <div class="panel-body">
                 <article th:utext="${article.content}">Content</article>
             </div>
+            <div class="panel-footer">
+                <a href="/articles/-1/edit" class="btn btn-default" th:href="${'/articles/'+article.id+'/edit'}">Edit</a>
+            </div>
         </div></div>    
     </section>
 </body>
