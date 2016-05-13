@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for play-java#play-java_2.11;1.0-SNAPSHOT [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies play-java#play-java_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.7 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@7c0bf2f6[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@7ceb6be9[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.7[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.7 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.11.7] org.scala-lang#scala-library;2.11.7[0m
@@ -1507,21 +1507,8 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies play-java#play-java_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1201-jdbc41 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.postgresql#postgresql;9.4-1201-jdbc41 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.postgresql#postgresql;9.4-1201-jdbc41 {compile=[default(compile)]}[0m
-[0m[[0minfo[0m] [0mResolving org.postgresql#postgresql;9.4-1201-jdbc41 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.postgresql#postgresql;9.4-1201-jdbc41 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\killermenpl\.ivy2\local\org.postgresql\postgresql\9.4-1201-jdbc41\ivys\ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.postgresql#postgresql;9.4-1201-jdbc41[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/postgresql/postgresql/9.4-1201-jdbc41/postgresql-9.4-1201-jdbc41.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.postgresql#postgresql;9.4-1201-jdbc41[0m
-[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/postgresql/postgresql/9.4-1201-jdbc41/postgresql-9.4-1201-jdbc41.pom (9.4-1201-jdbc41)[0m
-[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/postgresql/postgresql/9.4-1201-jdbc41/postgresql-9.4-1201-jdbc41.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/postgresql/postgresql/9.4-1201-jdbc41/postgresql-9.4-1201-jdbc41.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/postgresql/postgresql/9.4-1201-jdbc41/postgresql-9.4-1201-jdbc41.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/postgresql/postgresql/9.4-1201-jdbc41/postgresql-9.4-1201-jdbc41.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.postgresql#postgresql;9.4-1201-jdbc41!postgresql.pom(pom.original) (3386ms)[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\killermenpl\.ivy2\local\org.postgresql\postgresql\9.4-1201-jdbc41\jars\postgresql.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/postgresql/postgresql/9.4-1201-jdbc41/postgresql-9.4-1201-jdbc41.jar[0m
-[0m[[0mdebug[0m] [0m	found org.postgresql#postgresql;9.4-1201-jdbc41 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.postgresql#postgresql;9.4-1201-jdbc41[0m
+[0m[[0mdebug[0m] [0m	found org.postgresql#postgresql;9.4-1201-jdbc41 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies play-java#play-java_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1201-jdbc41 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies play-java#play-java_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1201-jdbc41 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies play-java#play-java_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1201-jdbc41 [compile->master][0m
@@ -8490,12 +8477,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.mindrot#jbcrypt;0.3m!jbcrypt.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.thymeleaf#thymeleaf;2.1.4.RELEASE!thymeleaf.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.mariadb.jdbc#mariadb-java-client;1.4.2!mariadb-java-client.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/postgresql/postgresql/9.4-1201-jdbc41/postgresql-9.4-1201-jdbc41.jar[0m
-[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/postgresql/postgresql/9.4-1201-jdbc41/postgresql-9.4-1201-jdbc41.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/postgresql/postgresql/9.4-1201-jdbc41/postgresql-9.4-1201-jdbc41.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/postgresql/postgresql/9.4-1201-jdbc41/postgresql-9.4-1201-jdbc41.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/postgresql/postgresql/9.4-1201-jdbc41/postgresql-9.4-1201-jdbc41.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.postgresql#postgresql;9.4-1201-jdbc41!postgresql.jar (11106ms)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.postgresql#postgresql;9.4-1201-jdbc41!postgresql.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.commons#commons-lang3;3.4!commons-lang3.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.1!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.avaje.ebeanorm#avaje-ebeanorm;6.18.1!avaje-ebeanorm.jar[0m
@@ -8667,7 +8649,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.akka#akka-actor_2.11;2.3.8!akka-actor_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.akka#akka-testkit_2.11;2.3.8!akka-testkit_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe#config;1.2.1!config.jar(bundle)[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 29929ms :: artifacts dl 11398ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 3802ms :: artifacts dl 192ms[0m
 [0m[[0mdebug[0m] [0m	report for play-java#play-java_2.11;1.0-SNAPSHOT compile produced in C:\Users\killermenpl\Dropbox\play-java\target\resolution-cache\reports\play-java-play-java_2.11-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for play-java#play-java_2.11;1.0-SNAPSHOT runtime produced in C:\Users\killermenpl\Dropbox\play-java\target\resolution-cache\reports\play-java-play-java_2.11-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for play-java#play-java_2.11;1.0-SNAPSHOT test produced in C:\Users\killermenpl\Dropbox\play-java\target\resolution-cache\reports\play-java-play-java_2.11-test.xml[0m
@@ -8682,5 +8664,5 @@
 [0m[[0mdebug[0m] [0m	report for play-java#play-java_2.11;1.0-SNAPSHOT pom produced in C:\Users\killermenpl\Dropbox\play-java\target\resolution-cache\reports\play-java-play-java_2.11-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for play-java#play-java_2.11;1.0-SNAPSHOT scala-tool produced in C:\Users\killermenpl\Dropbox\play-java\target\resolution-cache\reports\play-java-play-java_2.11-scala-tool.xml[0m
 [0m[[0mdebug[0m] [0m	report for play-java#play-java_2.11;1.0-SNAPSHOT fork-run produced in C:\Users\killermenpl\Dropbox\play-java\target\resolution-cache\reports\play-java-play-java_2.11-fork-run.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (29929ms resolve - 11398ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (3802ms resolve - 192ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
