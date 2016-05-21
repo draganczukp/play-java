@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+
+<head>
+    <!--
+    <meta charset="UTF-8">
+    <title>Untitled Document</title>
+-->
+</head>
+
+<body>
+
+    <section th:fragment="list">
+        <div class="container" th:if="${not #lists.isEmpty(articles)}">
+            <ul class="list-group">
+                <li class="list-group-item" th:each="article : ${articles}"><a href="/articles/list" th:text="${article.title}" th:href="${'/articles/'+article.id+'/get'}">Article name</a></li>
+            </ul>
+        </div>
+        <div class="container" th:if="${#lists.isEmpty(articles)}">
+            <div class="alert alert-info">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;
+                </button>
+                <strong>No articles to display</strong>
+            </div>
+
+        </div>
+    </section>
+
+    <section th:fragment="new">
+        <div class="container" style="min-height:600px;">
+            <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+            <script>
+                tinymce.init({
+                    selector: 'textarea'
+                });
+
+            </script>
+            <form action="/articles/add" method="post">
+                <input type="hidden" name="id" value="-1" th:value="${article ? article.id : '-1'}" />
+                <div class="btn-group">
+                    <button role="submit" class="btn btn-primary" name="action" value="save">Save</button>
+                    <button role="submit" class="btn btn-default" name="action" value="save_and_view">Save and view</button>
+                    <button role="submit" class="btn btn-danger" name="action" value="abort">Abort</button>
+                </div>
+                <br/>
+                <br/>
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" placeholder="Title" class="form-control" th:class="${errors ? 'form-control has-error' : 'form-control'}" th:value="${article ? article.title : ''}" />
+                </div>
+                <textarea id="content" rows="15" name="content">
+                    <span th:if="${article}" th:utext="${article.content}"></span>
+                </textarea>
+            </form>
+        </div>
+    </section>
+
+   <section th:fragment="edit">
+        <div class="container" style="min-height:600px;">
+            <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+            <script>
+                tinymce.init({
+                    selector: 'textarea'
+                });
+            </script>
+            <form action="/articles/-1/edit" th:action="'/articles/'+${article.id}+'/edit'" method="post">
+<!--                <input type="hidden" name="id" value="-1" th:value="${article ? article.id : '-1'}" />-->
+                <div class="btn-group">
+                    <button role="submit" class="btn btn-primary" name="action" value="save">Save</button>
+                    <button role="submit" class="btn btn-default" name="action" value="save_and_view">Save and view</button>
+                    <button role="submit" class="btn btn-danger" name="action" value="abort">Abort</button>
+                </div>
+                <br/>
+                <br/>
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" placeholder="Title" class="form-control" th:class="${errors ? 'form-control has-error' : 'form-control'}" th:value="${article ? article.title : ''}" />
+                </div>
+                <textarea id="content" rows="15" name="content">
+                    <span th:if="${article}" th:utext="${article.content}"></span>
+                </textarea>
+            </form>
+        </div>
+    </section>
+   
+    <section th:fragment="get">
+        <!--
+        <h1 class="h1" th:text="${article.title}">TITLE</h1>
+        <article th:utext="${article.content}">
+            CONTENT
+        </article>
+-->
+        <div class="container"><div class="panel panel-default">
+            <div class="panel-heading">
+                <h1 class="panel-header" th:text="${article.title}">Title</h1>
+            </div>
+            <div class="panel-body">
+                <article th:utext="${article.content}">Content</article>
+            </div>
+            <div class="panel-footer">
+                <a href="/articles/-1/edit" class="btn btn-default" th:href="${'/articles/'+article.id+'/edit'}">Edit</a>
+            </div>
+        </div></div>    
+    </section>
+</body>
+
+</html>

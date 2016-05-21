@@ -1,6 +1,6 @@
 name := """play-java"""
 
-//topLevelDirectory := Some("play-openshift")
+topLevelDirectory := Some("play-openshift")
 
 version := "1.0-SNAPSHOT"
 

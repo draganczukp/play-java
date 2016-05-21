@@ -98,8 +98,6 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\killermenpl\Dropbox\play-java\target\scala-2.11\classes\router\RoutesPrefix$$anonfun$1.class[0m
 [0m[[0mdebug[0m] [0m	router\Routes$$anonfun$routes$1$$anonfun$applyOrElse$7$$anonfun$apply$7.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\killermenpl\Dropbox\play-java\target\scala-2.11\classes\router\Routes$$anonfun$routes$1$$anonfun$applyOrElse$7$$anonfun$apply$7.class[0m
-[0m[[0mdebug[0m] [0m	evolutions\default\1.sql[0m
-[0m[[0mdebug[0m] [0m	  C:\Users\killermenpl\Dropbox\play-java\target\scala-2.11\classes\evolutions\default\1.sql[0m
 [0m[[0mdebug[0m] [0m	META-INF\resources\webjars\play-java\1.0-SNAPSHOT\images\favicon.ico[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\killermenpl\Dropbox\play-java\public\images\favicon.ico[0m
 [0m[[0mdebug[0m] [0m	filters\ExampleFilter.class[0m
