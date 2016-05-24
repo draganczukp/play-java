@@ -26,7 +26,8 @@ libraryDependencies ++= Seq(
 )
 libraryDependencies += "org.thymeleaf" % "thymeleaf" % "2.1.4.RELEASE"
 libraryDependencies += "org.mariadb.jdbc" % "mariadb-java-client" % "1.4.2"
-libraryDependencies += "org.postgresql" % "postgresql" % "9.4-1201-jdbc41"
+//libraryDependencies += "org.postgresql" % "postgresql" % "9.4-1201-jdbc41"
+libraryDependencies += "org.postgresql" % "postgresql" % "9.4.1208.jre7"
 
 // Compile the project before generating Eclipse files, so that generated .scala or .class files for views and routes are present
 EclipseKeys.preTasks := Seq(compile in Compile)
